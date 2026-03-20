@@ -54,7 +54,8 @@
     <table>
       <thead>
         <tr>
-          <th>Job name</th>
+          <th>Workflow</th>
+          <th>Commit</th>
           <th>Status</th>
           <th>Branch</th>
           <th>Triggered by</th>
@@ -64,6 +65,7 @@
       <tbody>
         {% for job in jobs %}
         <tr>
+          <td>{{ job.workflow }}</td>
           <td>{{ job.name }}</td>
           <td><span class="badge {{ job.status }}">{{ job.status }}</span></td>
           <td>{{ job.branch }}</td>
